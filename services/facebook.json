@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "facebook",
+  "name": "Facebook",
+  "version": 1,
+  "preselected": true,
+  "components": [
+    {
+      "id": "app",
+      "kind": "app",
+      "label": {
+        "vi": "App Facebook",
+        "en": "Facebook app"
+      },
+      "description": {
+        "vi": "Chặn toàn bộ mạng của app Facebook",
+        "en": "Blocks all network access of the Facebook app"
+      },
+      "packages": [
+        "com.facebook.katana"
+      ],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "block",
+          "scope": [
+            "com.facebook.katana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "kind": "web",
+      "label": {
+        "vi": "Facebook trên trình duyệt",
+        "en": "Facebook in the browser"
+      },
+      "description": {
+        "vi": "Chặn facebook.com và fb.com trong mọi app trừ các app chat được giữ",
+        "en": "Blocks facebook.com and fb.com in every app except the kept chat apps"
+      },
+      "packages": [],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "facebook.com",
+          "action": "block",
+          "scope": "all"
+        },
+        {
+          "domain": "fb.com",
+          "action": "block",
+          "scope": "all"
+        }
+      ]
+    },
+    {
+      "id": "webview-in-messenger",
+      "kind": "webview",
+      "label": {
+        "vi": "Trang Facebook mở trong Messenger",
+        "en": "Facebook pages opened inside Messenger"
+      },
+      "description": {
+        "vi": "Chặn tên miền web của Facebook chỉ với app Messenger. Chưa đo nên mặc định tắt",
+        "en": "Blocks Facebook web hostnames for the Messenger app only. Not measured yet, so off by default"
+      },
+      "packages": [
+        "com.facebook.orca"
+      ],
+      "status": "experimental",
+      "enabledByDefault": false,
+      "rules": [
+        {
+          "domain": "www.facebook.com",
+          "action": "block",
+          "scope": [
+            "com.facebook.orca"
+          ]
+        },
+        {
+          "domain": "m.facebook.com",
+          "action": "block",
+          "scope": [
+            "com.facebook.orca"
+          ]
+        },
+        {
+          "domain": "web.facebook.com",
+          "action": "block",
+          "scope": [
+            "com.facebook.orca"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messenger",
+      "kind": "chat",
+      "label": {
+        "vi": "Messenger (chat)",
+        "en": "Messenger (chat)"
+      },
+      "description": {
+        "vi": "Giữ app Messenger hoạt động bình thường",
+        "en": "Keeps the Messenger app working"
+      },
+      "packages": [
+        "com.facebook.orca"
+      ],
+      "status": "unmeasured",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "allow",
+          "scope": [
+            "com.facebook.orca"
+          ]
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}

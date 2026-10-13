@@ -1,0 +1,6 @@
+{
+  "$id": "protected-domains.schema.json",
+  "type": "array",
+  "uniqueItems": true,
+  "items": { "$ref": "common.schema.json#/$defs/hostname" }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "alavo-hush-rules",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Public rule sets for the Alavo Hush Android app: which domains to block or allow per service.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "keygen": "node scripts/gen-key.mjs",
+    "publish:dist": "node scripts/publish.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

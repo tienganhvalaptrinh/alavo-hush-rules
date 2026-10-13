@@ -1,0 +1,25 @@
+{
+  "$id": "index.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "version", "services"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "services": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "file", "version", "sha256"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/slug" },
+          "file": { "type": "string", "pattern": "^services/[a-z0-9-]+\\.json$" },
+          "version": { "type": "integer", "minimum": 1 },
+          "sha256": { "$ref": "common.schema.json#/$defs/sha256" }
+        }
+      }
+    }
+  }
+}

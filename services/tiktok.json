@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "tiktok",
+  "name": "TikTok",
+  "version": 1,
+  "preselected": true,
+  "components": [
+    {
+      "id": "app",
+      "kind": "app",
+      "label": {
+        "vi": "App TikTok",
+        "en": "TikTok app"
+      },
+      "description": {
+        "vi": "Chặn toàn bộ mạng của app TikTok",
+        "en": "Blocks all network access of the TikTok app"
+      },
+      "packages": [
+        "com.zhiliaoapp.musically",
+        "com.ss.android.ugc.trill"
+      ],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "block",
+          "scope": [
+            "com.zhiliaoapp.musically",
+            "com.ss.android.ugc.trill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "kind": "web",
+      "label": {
+        "vi": "TikTok trên trình duyệt",
+        "en": "TikTok in the browser"
+      },
+      "description": {
+        "vi": "Chặn tiktok.com trong mọi app",
+        "en": "Blocks tiktok.com in every app"
+      },
+      "packages": [],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "tiktok.com",
+          "action": "block",
+          "scope": "all"
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}

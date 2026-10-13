@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "version": 6,
+  "services": [
+    {
+      "id": "facebook",
+      "file": "services/facebook.json",
+      "version": 1,
+      "sha256": "dff587214ad92fba9f9e49dfaca4cdc09932e5acb4eba0d73c59f756c94f0584"
+    },
+    {
+      "id": "instagram",
+      "file": "services/instagram.json",
+      "version": 1,
+      "sha256": "60a8df6d9ea69feaea21971ae36f460653fcf9bc3c6b36c1e9f07bbf232831b0"
+    },
+    {
+      "id": "telegram",
+      "file": "services/telegram.json",
+      "version": 1,
+      "sha256": "21b148f413c0f3005116eef81b0c6a2505cf796a1ca01ee247f2d27fdd3e3d0b"
+    },
+    {
+      "id": "tiktok",
+      "file": "services/tiktok.json",
+      "version": 1,
+      "sha256": "4839aadf429fe386d7811b9cce161536fb21a5a803b76870e8185773f559bd31"
+    },
+    {
+      "id": "x",
+      "file": "services/x.json",
+      "version": 1,
+      "sha256": "3547c3de2f943839e99b466b9d0a2dd3df3bcf890d51d1c4f42c110385a76845"
+    },
+    {
+      "id": "zalo",
+      "file": "services/zalo.json",
+      "version": 1,
+      "sha256": "36e29d4882dd0b50266032c1745ff5b1b510be3774460d0589b87736ea783e0e"
+    }
+  ]
+}

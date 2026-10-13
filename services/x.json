@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "x",
+  "name": "X",
+  "version": 1,
+  "preselected": false,
+  "components": [
+    {
+      "id": "app",
+      "kind": "app",
+      "label": {
+        "vi": "App X",
+        "en": "X app"
+      },
+      "description": {
+        "vi": "Chặn toàn bộ mạng của app X (Twitter)",
+        "en": "Blocks all network access of the X (Twitter) app"
+      },
+      "packages": [
+        "com.twitter.android"
+      ],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "block",
+          "scope": [
+            "com.twitter.android"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "kind": "web",
+      "label": {
+        "vi": "X trên trình duyệt",
+        "en": "X in the browser"
+      },
+      "description": {
+        "vi": "Chặn x.com và twitter.com trong mọi app. Không chặn t.co vì nhiều trang dùng nó để rút gọn link",
+        "en": "Blocks x.com and twitter.com in every app. t.co is not blocked because many sites use it as a link shortener"
+      },
+      "packages": [],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "x.com",
+          "action": "block",
+          "scope": "all"
+        },
+        {
+          "domain": "twitter.com",
+          "action": "block",
+          "scope": "all"
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "zalo",
+  "name": "Zalo",
+  "version": 1,
+  "preselected": false,
+  "components": [
+    {
+      "id": "zalo",
+      "kind": "chat",
+      "label": {
+        "vi": "Zalo (chat)",
+        "en": "Zalo (chat)"
+      },
+      "description": {
+        "vi": "Giữ app Zalo hoạt động bình thường. Chưa tách được phần Nhật ký khỏi chat",
+        "en": "Keeps the Zalo app working. The Timeline section cannot be separated from chat yet"
+      },
+      "packages": [
+        "com.zing.zalo"
+      ],
+      "status": "unmeasured",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "allow",
+          "scope": [
+            "com.zing.zalo"
+          ]
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}

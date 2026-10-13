@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "telegram",
+  "name": "Telegram",
+  "version": 1,
+  "preselected": false,
+  "components": [
+    {
+      "id": "telegram",
+      "kind": "chat",
+      "label": {
+        "vi": "Telegram (chat)",
+        "en": "Telegram (chat)"
+      },
+      "description": {
+        "vi": "Giữ app Telegram hoạt động bình thường",
+        "en": "Keeps the Telegram app working"
+      },
+      "packages": [
+        "org.telegram.messenger",
+        "org.telegram.messenger.web"
+      ],
+      "status": "unmeasured",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "allow",
+          "scope": [
+            "org.telegram.messenger",
+            "org.telegram.messenger.web"
+          ]
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}

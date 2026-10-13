@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "instagram",
+  "name": "Instagram",
+  "version": 1,
+  "preselected": true,
+  "components": [
+    {
+      "id": "web",
+      "kind": "web",
+      "label": {
+        "vi": "Instagram trên trình duyệt",
+        "en": "Instagram in the browser"
+      },
+      "description": {
+        "vi": "Chặn instagram.com trong mọi app",
+        "en": "Blocks instagram.com in every app"
+      },
+      "packages": [],
+      "status": "stable",
+      "enabledByDefault": true,
+      "rules": [
+        {
+          "domain": "instagram.com",
+          "action": "block",
+          "scope": "all"
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "kind": "app",
+      "label": {
+        "vi": "App Instagram",
+        "en": "Instagram app"
+      },
+      "description": {
+        "vi": "Chặn cả app, kể cả tin nhắn. Chưa đo được cách chỉ chặn feed nên mặc định tắt",
+        "en": "Blocks the whole app, direct messages included. How to block only the feed is not measured yet, so off by default"
+      },
+      "packages": [
+        "com.instagram.android"
+      ],
+      "status": "unmeasured",
+      "enabledByDefault": false,
+      "rules": [
+        {
+          "domain": "*",
+          "action": "block",
+          "scope": [
+            "com.instagram.android"
+          ]
+        }
+      ]
+    }
+  ],
+  "measurements": []
+}
